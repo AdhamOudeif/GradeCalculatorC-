@@ -14,6 +14,7 @@ public:
 	void getData();
 	void setLetterGrade();
 };
+//Function to get all the data of the students grade
 void Grade::getData() {
 	cout << "Please enter the following information:" << endl;
 	cout << "Student's First Name:" << endl;
@@ -30,12 +31,13 @@ void Grade::getData() {
 	cin >> quiz2;
 }
 double Grade::getPercentage() {
+	//Initializing Score percentages
 	double finalPercent = 50;
 	double MidtermPercent = 30;
 	double quizPercent = 10;
 	int examScore = 100;
 	int quizScore = 10;
-	// Calc
+	// Calculating Grade Scores
 	double finalExamScore = (finalExam / examScore) * finalPercent;
 	double midtermExamScore = (midtermExam / examScore) * MidtermPercent;
 	double quiz1Score = (quiz1 / quizScore) * quizPercent;
@@ -47,6 +49,7 @@ double Grade::getPercentage() {
 	
 
 }
+//Function to set the grade letter
 void Grade::setLetterGrade() {
 	if (percent >= 90.0)
 		grade = 'A';
@@ -60,6 +63,7 @@ void Grade::setLetterGrade() {
 		grade = 'F';
 
 }
+//Main function, calls the class functions and outputs significant data
 int main() {
 	Grade student1;
 	student1.getData();
